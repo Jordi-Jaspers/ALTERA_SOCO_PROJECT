@@ -1,0 +1,25 @@
+
+State Machine - |POV_GLOBE|Main:main|current_bit
+Name current_bit.000 current_bit.110 current_bit.101 current_bit.100 current_bit.011 current_bit.010 current_bit.001 current_bit.111 
+current_bit.111 0 0 0 0 0 0 0 0 
+current_bit.001 0 0 0 0 0 0 1 1 
+current_bit.010 0 0 0 0 0 1 0 1 
+current_bit.011 0 0 0 0 1 0 0 1 
+current_bit.100 0 0 0 1 0 0 0 1 
+current_bit.101 0 0 1 0 0 0 0 1 
+current_bit.110 0 1 0 0 0 0 0 1 
+current_bit.000 1 0 0 0 0 0 0 1 
+
+State Machine - |POV_GLOBE|Main:main|color
+Name color.COLOR_G color.COLOR_B color.COLOR_R 
+color.COLOR_G 0 0 0 
+color.COLOR_R 1 0 1 
+color.COLOR_B 1 1 0 
+
+State Machine - |POV_GLOBE|Main:main|state
+Name state.STATE_TRANSMIT state.STATE_PRE state.STATE_LATCH state.STATE_RESET state.STATE_POST 
+state.STATE_RESET 0 0 0 0 0 
+state.STATE_LATCH 0 0 1 1 0 
+state.STATE_PRE 0 1 0 1 0 
+state.STATE_TRANSMIT 1 0 0 1 0 
+state.STATE_POST 0 0 0 1 1 

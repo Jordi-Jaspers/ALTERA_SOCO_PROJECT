@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed May 08 19:18:33 2019
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : POV_GLOBE
+Top-level Entity Name : POV_GLOBE
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 95 / 22,320 ( < 1 % )
+    Total combinational functions : 95 / 22,320 ( < 1 % )
+    Dedicated logic registers : 47 / 22,320 ( < 1 % )
+Total registers : 47
+Total pins : 118 / 154 ( 77 % )
+Total virtual pins : 0
+Total memory bits : 192 / 608,256 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,2 @@
+DE0_Nano.qp_info
+DE0_Nano.qar

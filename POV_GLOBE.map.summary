@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 08 19:18:18 2019
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : POV_GLOBE
+Top-level Entity Name : POV_GLOBE
+Family : Cyclone IV E
+Total logic elements : 119
+    Total combinational functions : 95
+    Dedicated logic registers : 71
+Total registers : 71
+Total pins : 118
+Total virtual pins : 0
+Total memory bits : 192
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
