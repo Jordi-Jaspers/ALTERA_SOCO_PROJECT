@@ -1,0 +1,25 @@
+1x DE0 FPGA NANO
+
+1 x WS2812b LED Strip
+
+1x 3144A Hall effect sensor
+
+1x LiPo Battery (1200mAh)
+
+1x TP4056 Protect/Charge circuit
+
+1x Boost Converter
+
+1x Ball Bearing
+
+1x 12V 3000RPM DC Motor
+
+1x 8mm Adapter
+
+1x 200x200x20mm Steel base plate
+
+3x 40x500x4mm flat steel
+
+M4, M5 bolts & nuts
+
+8mm aluminum rod
