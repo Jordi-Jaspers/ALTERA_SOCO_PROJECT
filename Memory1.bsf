@@ -22,7 +22,7 @@ agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 0 0 216 128)
-	(text "Memory" (rect 78 0 148 19)(font "Arial" (font_size 10)))
+	(text "Memory1" (rect 74 0 155 19)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 109 31 124)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -41,8 +41,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "address[5..0]" (rect 0 0 89 16)(font "Arial" (font_size 8)))
-		(text "address[5..0]" (rect 4 48 78 63)(font "Arial" (font_size 8)))
+		(text "address[10..0]" (rect 0 0 97 16)(font "Arial" (font_size 8)))
+		(text "address[10..0]" (rect 4 48 85 63)(font "Arial" (font_size 8)))
 		(line (pt 0 64)(pt 88 64)(line_width 3))
 	)
 	(port
@@ -61,7 +61,7 @@ agreement for further details.
 	)
 	(drawing
 		(text "24 bits" (rect 106 29 198 170)(font "Arial" )(vertical))
-		(text "64 words" (rect 120 15 219 184)(font "Arial" )(vertical))
+		(text "2048 words" (rect 120 15 226 198)(font "Arial" )(vertical))
 		(text "Block type: AUTO" (rect 48 111 186 236)(font "Arial" ))
 		(line (pt 104 24)(pt 136 24))
 		(line (pt 136 24)(pt 136 96))

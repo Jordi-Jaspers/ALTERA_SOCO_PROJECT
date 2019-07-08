@@ -1,5 +1,5 @@
 Flow report for POV_GLOBE
-Wed May 08 19:18:43 2019
+Wed Jun 19 17:15:54 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 08 19:18:38 2019       ;
+; Flow Status                        ; Successful - Wed Jun 19 17:15:48 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; POV_GLOBE                                   ;
 ; Top-level Entity Name              ; POV_GLOBE                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 95 / 22,320 ( < 1 % )                       ;
-;     Total combinational functions  ; 95 / 22,320 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 47 / 22,320 ( < 1 % )                       ;
-; Total registers                    ; 47                                          ;
-; Total pins                         ; 118 / 154 ( 77 % )                          ;
+; Total logic elements               ; 176 / 22,320 ( < 1 % )                      ;
+;     Total combinational functions  ; 160 / 22,320 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 110 / 22,320 ( < 1 % )                      ;
+; Total registers                    ; 110                                         ;
+; Total pins                         ; 84 / 154 ( 55 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 192 / 608,256 ( < 1 % )                     ;
+; Total memory bits                  ; 1,536 / 608,256 ( < 1 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/08/2019 19:15:11 ;
+; Start date & time ; 06/19/2019 17:15:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; POV_GLOBE           ;
 +-------------------+---------------------+
@@ -76,16 +76,18 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1098823901728.155733571119556          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1098823901728.156095732008072          ; --            ; --          ; --         ;
+; ENABLE_SIGNALTAP                    ; On                                     ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; Memory.bsf                             ; --            ; --          ; --         ;
-; MISC_FILE                           ; Memory_bb.v                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ROM1.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ROM1_bb.v                              ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; USE_SIGNALTAP_FILE                  ; stp2.stp                               ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -94,11 +96,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:03:07     ; 1.0                     ; 4797 MB             ; 00:01:07                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 5531 MB             ; 00:00:12                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4689 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4796 MB             ; 00:00:04                           ;
-; Total                     ; 00:03:28     ; --                      ; --                  ; 00:01:25                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 4787 MB             ; 00:00:34                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 5532 MB             ; 00:00:10                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4689 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4798 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:49                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

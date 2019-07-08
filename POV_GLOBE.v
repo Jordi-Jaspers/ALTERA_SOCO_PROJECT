@@ -52,8 +52,10 @@ module POV_GLOBE(
 	input 		     [2:0]		GPIO_2_IN,
 
 	//////////// GPIO_0, GPIO_0 connect to GPIO Default //////////
-	inout 		    [33:0]		GPIO,
-	input 		     [1:0]		GPIO_IN
+	//inout 		    [33:0]		GPIO,
+	//input 		     [1:0]		GPIO_IN
+	input								Data_in,
+	output 							Data_out
 );
 
 
@@ -67,6 +69,6 @@ module POV_GLOBE(
 //  Structural coding
 //=======================================================
 
-Main main(CLOCK_50, GPIO, KEY);
+Main main(CLOCK_50, KEY, Data_in, Data_out);
 
 endmodule

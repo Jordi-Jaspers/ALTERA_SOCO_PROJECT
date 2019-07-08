@@ -1,0 +1,90 @@
+-- Copyright (C) 2016  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel MegaCore Function License Agreement, or other 
+-- applicable license agreement, including, without limitation, 
+-- that your use is for the sole purpose of programming logic 
+-- devices manufactured by Intel and sold by Intel or its 
+-- authorized distributors.  Please refer to the applicable 
+-- agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=24;
+DEPTH=999;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	[0..54]  :   0;
+	[55..56]  :   65280;
+	[57..93]  :   0;
+	94   :   65280;
+	[95..130]  :   0;
+	131  :   65280;
+	[132..167]  :   0;
+	168  :   65280;
+	[169..194]  :   0;
+	195  :   65280;
+	[196..197]  :   0;
+	[198..204]  :   65280;
+	[205..274]  :   0;
+	[275..276]  :   65280;
+	[277..310]  :   0;
+	311  :   65280;
+	[312..313]  :   0;
+	314  :   65280;
+	[315..346]  :   0;
+	347  :   65280;
+	[348..351]  :   0;
+	352  :   65280;
+	[353..383]  :   0;
+	384  :   65280;
+	[385..388]  :   0;
+	389  :   65280;
+	[390..421]  :   0;
+	422  :   65280;
+	[423..424]  :   0;
+	425  :   65280;
+	[426..459]  :   0;
+	[460..461]  :   65280;
+	[462..531]  :   0;
+	[532..537]  :   65280;
+	[538..569]  :   0;
+	570  :   65280;
+	[571..605]  :   0;
+	606  :   65280;
+	[607..644]  :   0;
+	[645..646]  :   65280;
+	[647..680]  :   0;
+	681  :   65280;
+	[682..683]  :   0;
+	684  :   65280;
+	[685..716]  :   0;
+	717  :   65280;
+	[718..721]  :   0;
+	722  :   65280;
+	[723..753]  :   0;
+	754  :   65280;
+	[755..758]  :   0;
+	759  :   65280;
+	[760..791]  :   0;
+	792  :   65280;
+	[793..794]  :   0;
+	795  :   65280;
+	[796..829]  :   0;
+	[830..831]  :   65280;
+	[832..861]  :   0;
+	[862..870]  :   65280;
+	[871..935]  :   0;
+	936  :   65280;
+	[937..938]  :   0;
+	[939..944]  :   65280;
+	[945..998]  :   0;
+END;

@@ -1,0 +1,130 @@
+-- Copyright (C) 2016  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel MegaCore Function License Agreement, or other 
+-- applicable license agreement, including, without limitation, 
+-- that your use is for the sole purpose of programming logic 
+-- devices manufactured by Intel and sold by Intel or its 
+-- authorized distributors.  Please refer to the applicable 
+-- agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=24;
+DEPTH=1024;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	[0..274]  :   0;
+	275   :   255;
+	[276..319]  :   0;
+	320   :   255;
+	321   :   0;
+	322   :   255;
+	[323..346]  :   0;
+	347   :   255;
+	[348..355]  :   0;
+	356   :   255;
+	[357..373]  :   0;
+	374   :   255;
+	[375..382]  :   0;
+	383   :   255;
+	[384..386]  :   0;
+	[387..388]  :   255;
+	[389..391]  :   0;
+	392   :   255;
+	393   :   0;
+	394   :   255;
+	[395..396]  :   0;
+	[397..398]  :   255;
+	[399..400]  :   0;
+	401   :   255;
+	402   :   0;
+	403   :   255;
+	[404..409]  :   0;
+	410   :   255;
+	[411..412]  :   0;
+	413   :   255;
+	[414..415]  :   0;
+	416   :   255;
+	[417..418]  :   0;
+	[419..420]  :   255;
+	[421..422]  :   0;
+	423   :   255;
+	[424..425]  :   0;
+	426   :   255;
+	427   :   0;
+	428   :   255;
+	429   :   0;
+	430   :   255;
+	[431..436]  :   0;
+	437   :   255;
+	438   :   0;
+	439   :   255;
+	[440..443]  :   0;
+	444   :   255;
+	445   :   0;
+	446   :   255;
+	[447..448]  :   0;
+	449   :   255;
+	[450..453]  :   0;
+	[454..455]  :   255;
+	456   :   0;
+	457   :   255;
+	[458..463]  :   0;
+	464   :   255;
+	465   :   0;
+	466   :   255;
+	[467..470]  :   0;
+	471   :   255;
+	472   :   0;
+	473   :   255;
+	[474..475]  :   0;
+	476   :   255;
+	[477..480]  :   0;
+	[481..482]  :   255;
+	483   :   0;
+	484   :   255;
+	[485..486]  :   0;
+	487   :   255;
+	[488..490]  :   0;
+	491   :   255;
+	[492..493]  :   0;
+	494   :   255;
+	[495..496]  :   0;
+	497   :   255;
+	[498..499]  :   0;
+	500   :   255;
+	[501..503]  :   0;
+	504   :   255;
+	[505..506]  :   0;
+	507   :   255;
+	508   :   0;
+	509   :   255;
+	510   :   0;
+	511   :   255;
+	[512..513]  :   0;
+	514   :   255;
+	[515..517]  :   0;
+	518   :   255;
+	[519..521]  :   0;
+	[522..523]  :   255;
+	[524..526]  :   0;
+	527   :   255;
+	[528..531]  :   0;
+	[532..533]  :   255;
+	[534..535]  :   0;
+	536   :   255;
+	537   :   0;
+	538   :   255;
+	[539..541]  :   0;
+	[542..544]  :   255;
+	[545..1023]  :   0;
+END;

@@ -22,7 +22,7 @@ agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 0 0 216 128)
-	(text "Memory" (rect 78 0 148 19)(font "Arial" (font_size 10)))
+	(text "RAM_Port" (rect 69 0 161 19)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 109 31 124)(font "Arial" ))
 	(port
 		(pt 0 32)

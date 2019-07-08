@@ -1,5 +1,5 @@
 Analysis & Synthesis report for POV_GLOBE
-Wed May 08 19:18:18 2019
+Wed Jun 19 17:15:36 2019
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -16,19 +16,24 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |POV_GLOBE|Main:main|current_bit
- 11. State Machine - |POV_GLOBE|Main:main|color
- 12. State Machine - |POV_GLOBE|Main:main|state
- 13. Registers Removed During Synthesis
- 14. General Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for Main:main|Memory:memory|altsyncram:altsyncram_component|altsyncram_lji1:auto_generated
- 17. Parameter Settings for User Entity Instance: Main:main
- 18. Parameter Settings for User Entity Instance: Main:main|Memory:memory|altsyncram:altsyncram_component
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "Main:main|Memory:memory"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 11. State Machine - |POV_GLOBE|Main:main|DIM_LED
+ 12. State Machine - |POV_GLOBE|Main:main|REVERSE_MODULE
+ 13. State Machine - |POV_GLOBE|Main:main|REVERSE_LED
+ 14. State Machine - |POV_GLOBE|Main:main|HALL_SWITCHED
+ 15. State Machine - |POV_GLOBE|Main:main|color
+ 16. State Machine - |POV_GLOBE|Main:main|state
+ 17. Registers Removed During Synthesis
+ 18. Removed Registers Triggering Further Register Optimizations
+ 19. General Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for Main:main|ROM1:rom|altsyncram:altsyncram_component|altsyncram_j9a1:auto_generated
+ 22. Parameter Settings for User Entity Instance: Main:main
+ 23. Parameter Settings for User Entity Instance: Main:main|ROM1:rom|altsyncram:altsyncram_component
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "Main:main|ROM1:rom"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -55,18 +60,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 08 19:18:18 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 19 17:15:36 2019       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; POV_GLOBE                                   ;
 ; Top-level Entity Name              ; POV_GLOBE                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 119                                         ;
-;     Total combinational functions  ; 95                                          ;
-;     Dedicated logic registers      ; 71                                          ;
-; Total registers                    ; 71                                          ;
-; Total pins                         ; 118                                         ;
+; Total logic elements               ; 186                                         ;
+;     Total combinational functions  ; 160                                         ;
+;     Dedicated logic registers      ; 110                                         ;
+; Total registers                    ; 110                                         ;
+; Total pins                         ; 84                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 192                                         ;
+; Total memory bits                  ; 1,536                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -182,8 +187,8 @@ agreement for further details.
 +----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Main.v                           ; yes             ; User Verilog HDL File            ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v                 ;         ;
 ; POV_GLOBE.v                      ; yes             ; User Verilog HDL File            ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v            ;         ;
-; Memory.v                         ; yes             ; User Wizard-Generated File       ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Memory.v               ;         ;
-; Color_Data.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Color_Data.mif         ;         ;
+; ROM_Data2.mif                    ; yes             ; User Memory Initialization File  ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/ROM_Data2.mif          ;         ;
+; ROM1.v                           ; yes             ; User Wizard-Generated File       ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/ROM1.v                 ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf                                                               ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                        ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                  ;         ;
@@ -193,7 +198,7 @@ agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc                                                                   ;         ;
 ; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc                                                                   ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc                                                                 ;         ;
-; db/altsyncram_lji1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/db/altsyncram_lji1.tdf ;         ;
+; db/altsyncram_j9a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/db/altsyncram_j9a1.tdf ;         ;
 +----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -202,64 +207,64 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 119            ;
+; Estimated Total logic elements              ; 186            ;
 ;                                             ;                ;
-; Total combinational functions               ; 95             ;
+; Total combinational functions               ; 160            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 43             ;
+;     -- 4 input functions                    ; 104            ;
 ;     -- 3 input functions                    ; 12             ;
-;     -- <=2 input functions                  ; 40             ;
+;     -- <=2 input functions                  ; 44             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 78             ;
-;     -- arithmetic mode                      ; 17             ;
+;     -- normal mode                          ; 131            ;
+;     -- arithmetic mode                      ; 29             ;
 ;                                             ;                ;
-; Total registers                             ; 71             ;
-;     -- Dedicated logic registers            ; 71             ;
+; Total registers                             ; 110            ;
+;     -- Dedicated logic registers            ; 110            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 118            ;
-; Total memory bits                           ; 192            ;
+; I/O pins                                    ; 84             ;
+; Total memory bits                           ; 1536           ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 95             ;
-; Total fan-out                               ; 822            ;
-; Average fan-out                             ; 1.68           ;
+; Maximum fan-out                             ; 134            ;
+; Total fan-out                               ; 1163           ;
+; Average fan-out                             ; 2.36           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |POV_GLOBE                                   ; 95 (1)              ; 71 (0)                    ; 192         ; 0            ; 0       ; 0         ; 118  ; 0            ; |POV_GLOBE                                                                                        ; POV_GLOBE       ; work         ;
-;    |Main:main|                               ; 94 (94)             ; 71 (71)                   ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main                                                                              ; Main            ; work         ;
-;       |Memory:memory|                        ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main|Memory:memory                                                                ; Memory          ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main|Memory:memory|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_lji1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main|Memory:memory|altsyncram:altsyncram_component|altsyncram_lji1:auto_generated ; altsyncram_lji1 ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-----------------+--------------+
+; |POV_GLOBE                                   ; 160 (1)             ; 110 (0)                   ; 1536        ; 0            ; 0       ; 0         ; 84   ; 0            ; |POV_GLOBE                                                                                   ; POV_GLOBE       ; work         ;
+;    |Main:main|                               ; 159 (159)           ; 110 (110)                 ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main                                                                         ; Main            ; work         ;
+;       |ROM1:rom|                             ; 0 (0)               ; 0 (0)                     ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main|ROM1:rom                                                                ; ROM1            ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main|ROM1:rom|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_j9a1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1536        ; 0            ; 0       ; 0         ; 0    ; 0            ; |POV_GLOBE|Main:main|ROM1:rom|altsyncram:altsyncram_component|altsyncram_j9a1:auto_generated ; altsyncram_j9a1 ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                           ;
-+---------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-; Name                                                                                              ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
-+---------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-; Main:main|Memory:memory|altsyncram:altsyncram_component|altsyncram_lji1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 36           ; 24           ; --           ; --           ; 864  ; Color_Data.mif ;
-+---------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                               ;
++----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
+; Name                                                                                         ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF           ;
++----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
+; Main:main|ROM1:rom|altsyncram:altsyncram_component|altsyncram_j9a1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 999          ; 24           ; --           ; --           ; 23976 ; ROM_Data2.mif ;
++----------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                    ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
-; Altera ; RAM: 1-PORT  ; 16.1    ; N/A          ; N/A          ; |POV_GLOBE|Main:main|Memory:memory ; Memory.v        ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                           ;
++--------+--------------+---------+--------------+--------------+-------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance               ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-------------------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 16.1    ; N/A          ; N/A          ; |POV_GLOBE|Main:main|ROM1:rom ; ROM1.v          ;
++--------+--------------+---------+--------------+--------------+-------------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
@@ -280,6 +285,50 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
++----------------------------------------------+
+; State Machine - |POV_GLOBE|Main:main|DIM_LED ;
++------------+---------------------------------+
+; Name       ; DIM_LED.01                      ;
++------------+---------------------------------+
+; DIM_LED.00 ; 0                               ;
+; DIM_LED.01 ; 1                               ;
++------------+---------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------+
+; State Machine - |POV_GLOBE|Main:main|REVERSE_MODULE ;
++-------------------+---------------------------------+
+; Name              ; REVERSE_MODULE.01               ;
++-------------------+---------------------------------+
+; REVERSE_MODULE.00 ; 0                               ;
+; REVERSE_MODULE.01 ; 1                               ;
++-------------------+---------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------+
+; State Machine - |POV_GLOBE|Main:main|REVERSE_LED ;
++----------------+---------------------------------+
+; Name           ; REVERSE_LED.01                  ;
++----------------+---------------------------------+
+; REVERSE_LED.00 ; 0                               ;
+; REVERSE_LED.01 ; 1                               ;
++----------------+---------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------+
+; State Machine - |POV_GLOBE|Main:main|HALL_SWITCHED ;
++------------------+---------------------------------+
+; Name             ; HALL_SWITCHED.01                ;
++------------------+---------------------------------+
+; HALL_SWITCHED.00 ; 0                               ;
+; HALL_SWITCHED.01 ; 1                               ;
++------------------+---------------------------------+
+
+
+Encoding Type:  One-Hot
 +---------------------------------------------------------------+
 ; State Machine - |POV_GLOBE|Main:main|color                    ;
 +---------------+---------------+---------------+---------------+
@@ -292,36 +341,69 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |POV_GLOBE|Main:main|state                                                                               ;
-+----------------------+----------------------+-----------------+-------------------+-------------------+------------------+
-; Name                 ; state.STATE_TRANSMIT ; state.STATE_PRE ; state.STATE_LATCH ; state.STATE_RESET ; state.STATE_POST ;
-+----------------------+----------------------+-----------------+-------------------+-------------------+------------------+
-; state.STATE_RESET    ; 0                    ; 0               ; 0                 ; 0                 ; 0                ;
-; state.STATE_LATCH    ; 0                    ; 0               ; 1                 ; 1                 ; 0                ;
-; state.STATE_PRE      ; 0                    ; 1               ; 0                 ; 1                 ; 0                ;
-; state.STATE_TRANSMIT ; 1                    ; 0               ; 0                 ; 1                 ; 0                ;
-; state.STATE_POST     ; 0                    ; 0               ; 0                 ; 1                 ; 1                ;
-+----------------------+----------------------+-----------------+-------------------+-------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |POV_GLOBE|Main:main|state                                                                                                                                                                                                             ;
++----------------------+------------------+------------------+---------------------+----------------------+-------------------+---------------------+------------------+----------------------+-----------------+--------------------+-------------------+
+; Name                 ; state.STATE_FLOW ; state.STATE_LINE ; state.STATE_PICTURE ; state.STATE_GRADIENT ; state.STATE_TIMER ; state.STATE_RESTART ; state.STATE_POST ; state.STATE_TRANSMIT ; state.STATE_PRE ; state.STATE_STATIC ; state.STATE_RESET ;
++----------------------+------------------+------------------+---------------------+----------------------+-------------------+---------------------+------------------+----------------------+-----------------+--------------------+-------------------+
+; state.STATE_RESET    ; 0                ; 0                ; 0                   ; 0                    ; 0                 ; 0                   ; 0                ; 0                    ; 0               ; 0                  ; 0                 ;
+; state.STATE_STATIC   ; 0                ; 0                ; 0                   ; 0                    ; 0                 ; 0                   ; 0                ; 0                    ; 0               ; 1                  ; 1                 ;
+; state.STATE_PRE      ; 0                ; 0                ; 0                   ; 0                    ; 0                 ; 0                   ; 0                ; 0                    ; 1               ; 0                  ; 1                 ;
+; state.STATE_TRANSMIT ; 0                ; 0                ; 0                   ; 0                    ; 0                 ; 0                   ; 0                ; 1                    ; 0               ; 0                  ; 1                 ;
+; state.STATE_POST     ; 0                ; 0                ; 0                   ; 0                    ; 0                 ; 0                   ; 1                ; 0                    ; 0               ; 0                  ; 1                 ;
+; state.STATE_RESTART  ; 0                ; 0                ; 0                   ; 0                    ; 0                 ; 1                   ; 0                ; 0                    ; 0               ; 0                  ; 1                 ;
+; state.STATE_TIMER    ; 0                ; 0                ; 0                   ; 0                    ; 1                 ; 0                   ; 0                ; 0                    ; 0               ; 0                  ; 1                 ;
+; state.STATE_GRADIENT ; 0                ; 0                ; 0                   ; 1                    ; 0                 ; 0                   ; 0                ; 0                    ; 0               ; 0                  ; 1                 ;
+; state.STATE_PICTURE  ; 0                ; 0                ; 1                   ; 0                    ; 0                 ; 0                   ; 0                ; 0                    ; 0               ; 0                  ; 1                 ;
+; state.STATE_LINE     ; 0                ; 1                ; 0                   ; 0                    ; 0                 ; 0                   ; 0                ; 0                    ; 0               ; 0                  ; 1                 ;
+; state.STATE_FLOW     ; 1                ; 0                ; 0                   ; 0                    ; 0                 ; 0                   ; 0                ; 0                    ; 0               ; 0                  ; 1                 ;
++----------------------+------------------+------------------+---------------------+----------------------+-------------------+---------------------+------------------+----------------------+-----------------+--------------------+-------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; Main:main|next_LED[2]                  ; Merged with Main:main|address[2]       ;
-; Main:main|next_LED[1]                  ; Merged with Main:main|address[1]       ;
-; Main:main|next_LED[0]                  ; Merged with Main:main|address[0]       ;
-; Main:main|GPIO[1..9,11..33]            ; Merged with Main:main|GPIO[10]         ;
-; Main:main|GPIO[10]                     ; Stuck at GND due to stuck port data_in ;
-; Main:main|current_bit~2                ; Lost fanout                            ;
-; Main:main|current_bit~3                ; Lost fanout                            ;
-; Main:main|current_bit~4                ; Lost fanout                            ;
-; Main:main|state~8                      ; Lost fanout                            ;
-; Main:main|state~9                      ; Lost fanout                            ;
-; Total Number of Removed Registers = 41 ;                                        ;
-+----------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++----------------------------------------+--------------------------------------------+
+; Register name                          ; Reason for Removal                         ;
++----------------------------------------+--------------------------------------------+
+; Main:main|address[5]                   ; Merged with Main:main|NEXT_LED[5]          ;
+; Main:main|address[4]                   ; Merged with Main:main|NEXT_LED[4]          ;
+; Main:main|address[3]                   ; Merged with Main:main|NEXT_LED[3]          ;
+; Main:main|address[2]                   ; Merged with Main:main|NEXT_LED[2]          ;
+; Main:main|address[1]                   ; Merged with Main:main|NEXT_LED[1]          ;
+; Main:main|address[0]                   ; Merged with Main:main|NEXT_LED[0]          ;
+; Main:main|state.STATE_FLOW             ; Lost fanout                                ;
+; Main:main|current_bit~10               ; Lost fanout                                ;
+; Main:main|current_bit~11               ; Lost fanout                                ;
+; Main:main|current_bit~12               ; Lost fanout                                ;
+; Main:main|DIM_LED~5                    ; Lost fanout                                ;
+; Main:main|REVERSE_MODULE~5             ; Lost fanout                                ;
+; Main:main|REVERSE_LED~5                ; Lost fanout                                ;
+; Main:main|HALL_SWITCHED~3              ; Lost fanout                                ;
+; Main:main|state~13                     ; Lost fanout                                ;
+; Main:main|state~14                     ; Lost fanout                                ;
+; Main:main|state~15                     ; Lost fanout                                ;
+; Main:main|state~16                     ; Lost fanout                                ;
+; Main:main|state.STATE_LINE             ; Merged with Main:main|state.STATE_GRADIENT ;
+; Main:main|state.STATE_STATIC           ; Merged with Main:main|state.STATE_GRADIENT ;
+; Main:main|state.STATE_GRADIENT         ; Stuck at GND due to stuck port data_in     ;
+; Main:main|TOTAL_LEDS[0,1,3,4]          ; Stuck at GND due to stuck port data_in     ;
+; Main:main|DIM_LED.01                   ; Stuck at GND due to stuck port data_in     ;
+; Main:main|REVERSE_LED.01               ; Stuck at GND due to stuck port data_in     ;
+; Main:main|state.STATE_TIMER            ; Stuck at GND due to stuck port data_in     ;
+; Main:main|REVERSE_MODULE.01            ; Stuck at GND due to stuck port data_in     ;
+; Main:main|TIMER[0..21]                 ; Stuck at GND due to stuck port data_in     ;
+; Total Number of Removed Registers = 51 ;                                            ;
++----------------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                   ;
++--------------------------------+---------------------------+--------------------------------------------------+
+; Register name                  ; Reason for Removal        ; Registers Removed due to This Register           ;
++--------------------------------+---------------------------+--------------------------------------------------+
+; Main:main|state.STATE_GRADIENT ; Stuck at GND              ; Main:main|state.STATE_TIMER, Main:main|TIMER[21] ;
+;                                ; due to stuck port data_in ;                                                  ;
++--------------------------------+---------------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -329,12 +411,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 71    ;
-; Number of registers using Synchronous Clear  ; 28    ;
-; Number of registers using Synchronous Load   ; 3     ;
+; Total registers                              ; 110   ;
+; Number of registers using Synchronous Clear  ; 41    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 59    ;
+; Number of registers using Clock Enable       ; 84    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -344,21 +426,29 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |POV_GLOBE|Main:main|address[2]        ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |POV_GLOBE|Main:main|reset_counter[11] ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |POV_GLOBE|Main:main|current_byte[4]   ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |POV_GLOBE|Main:main|current_bit       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |POV_GLOBE|Main:main|state             ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 0 LEs                ; 72 LEs                 ; Yes        ; |POV_GLOBE|Main:main|green[6]          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |POV_GLOBE|Main:main|TOTAL_LEDS[5]     ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |POV_GLOBE|Main:main|NEXT_LED[0]       ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 24 LEs               ; 40 LEs                 ; Yes        ; |POV_GLOBE|Main:main|Color_Data[15]    ;
+; 12:1               ; 16 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |POV_GLOBE|Main:main|Color_Data[17]    ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |POV_GLOBE|Main:main|current_byte[7]   ;
+; 14:1               ; 6 bits    ; 54 LEs        ; 12 LEs               ; 42 LEs                 ; Yes        ; |POV_GLOBE|Main:main|MODULE_COUNTER[0] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |POV_GLOBE|Main:main|DIM_LED           ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |POV_GLOBE|Main:main|HALL_SWITCHED     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |POV_GLOBE|Main:main|TOTAL_LEDS        ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |POV_GLOBE|Main:main|REVERSE_MODULE    ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; No         ; |POV_GLOBE|Main:main|current_bit       ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 4 LEs                ; 40 LEs                 ; No         ; |POV_GLOBE|Main:main|state             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Source assignments for Main:main|Memory:memory|altsyncram:altsyncram_component|altsyncram_lji1:auto_generated ;
-+---------------------------------+--------------------+------+-------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                              ;
-+---------------------------------+--------------------+------+-------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                               ;
-+---------------------------------+--------------------+------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for Main:main|ROM1:rom|altsyncram:altsyncram_component|altsyncram_j9a1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                         ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                          ;
++---------------------------------+--------------------+------+--------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -366,103 +456,100 @@ Encoding Type:  One-Hot
 +----------------+----------+----------------------------+
 ; Parameter Name ; Value    ; Type                       ;
 +----------------+----------+----------------------------+
-; AMOUNT_LEDS    ; 5        ; Signed Integer             ;
+; AMOUNT_LEDS    ; 36       ; Signed Integer             ;
 ; SYSTEM_CLOCK   ; 50000000 ; Signed Integer             ;
 +----------------+----------+----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Main:main|Memory:memory|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                     ;
-+------------------------------------+----------------------+------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                  ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                           ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                  ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                  ;
-; WIDTH_A                            ; 24                   ; Signed Integer                           ;
-; WIDTHAD_A                          ; 6                    ; Signed Integer                           ;
-; NUMWORDS_A                         ; 36                   ; Signed Integer                           ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                  ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                  ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                  ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                  ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                  ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                  ;
-; WIDTH_B                            ; 1                    ; Untyped                                  ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                  ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                  ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                  ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                  ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                  ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                  ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                  ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                  ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                  ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                  ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                  ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                  ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                  ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                  ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                           ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                  ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                  ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                  ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                  ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                  ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                  ;
-; INIT_FILE                          ; Color_Data.mif       ; Untyped                                  ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                  ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                  ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                  ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                  ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                  ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                  ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                  ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                  ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                  ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                  ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                  ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                  ;
-; CBXI_PARAMETER                     ; altsyncram_lji1      ; Untyped                                  ;
-+------------------------------------+----------------------+------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Main:main|ROM1:rom|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------+
+; Parameter Name                     ; Value                ; Type                                ;
++------------------------------------+----------------------+-------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                             ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                             ;
+; WIDTH_A                            ; 24                   ; Signed Integer                      ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                      ;
+; NUMWORDS_A                         ; 999                  ; Signed Integer                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WIDTH_B                            ; 1                    ; Untyped                             ;
+; WIDTHAD_B                          ; 1                    ; Untyped                             ;
+; NUMWORDS_B                         ; 1                    ; Untyped                             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                             ;
+; BYTE_SIZE                          ; 8                    ; Untyped                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; INIT_FILE                          ; ROM_Data2.mif        ; Untyped                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                             ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                             ;
+; CBXI_PARAMETER                     ; altsyncram_j9a1      ; Untyped                             ;
++------------------------------------+----------------------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                    ;
-+-------------------------------------------+---------------------------------------------------------+
-; Name                                      ; Value                                                   ;
-+-------------------------------------------+---------------------------------------------------------+
-; Number of entity instances                ; 1                                                       ;
-; Entity Instance                           ; Main:main|Memory:memory|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                             ;
-;     -- WIDTH_A                            ; 24                                                      ;
-;     -- NUMWORDS_A                         ; 36                                                      ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
-;     -- WIDTH_B                            ; 1                                                       ;
-;     -- NUMWORDS_B                         ; 1                                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
-+-------------------------------------------+---------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                               ;
++-------------------------------------------+----------------------------------------------------+
+; Name                                      ; Value                                              ;
++-------------------------------------------+----------------------------------------------------+
+; Number of entity instances                ; 1                                                  ;
+; Entity Instance                           ; Main:main|ROM1:rom|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                ;
+;     -- WIDTH_A                            ; 24                                                 ;
+;     -- NUMWORDS_A                         ; 999                                                ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                       ;
+;     -- WIDTH_B                            ; 1                                                  ;
+;     -- NUMWORDS_B                         ; 1                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                          ;
++-------------------------------------------+----------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Main:main|Memory:memory"                                                                                                                          ;
-+---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                         ;
-+---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "address[5..3]" will be connected to GND. ;
-; data    ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "data[23..7]" will be connected to GND.  ;
-; data    ; Input ; Info     ; Stuck at GND                                                                                                                                    ;
-; wren    ; Input ; Info     ; Stuck at GND                                                                                                                                    ;
-+---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Main:main|ROM1:rom"                                                                                                                                ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                          ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (6 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "address[9..6]" will be connected to GND. ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -470,28 +557,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 118                         ;
-; cycloneiii_ff         ; 71                          ;
-;     ENA               ; 37                          ;
-;     ENA SCLR          ; 21                          ;
-;     ENA SLD           ; 1                           ;
-;     SCLR              ; 5                           ;
-;     SCLR SLD          ; 2                           ;
+; boundary_port         ; 84                          ;
+; cycloneiii_ff         ; 110                         ;
+;     ENA               ; 64                          ;
+;     ENA SCLR          ; 20                          ;
+;     SCLR              ; 21                          ;
 ;     plain             ; 5                           ;
-; cycloneiii_io_obuf    ; 64                          ;
-; cycloneiii_lcell_comb ; 95                          ;
-;     arith             ; 17                          ;
-;         2 data inputs ; 17                          ;
-;     normal            ; 78                          ;
+; cycloneiii_io_obuf    ; 30                          ;
+; cycloneiii_lcell_comb ; 161                         ;
+;     arith             ; 29                          ;
+;         2 data inputs ; 29                          ;
+;     normal            ; 132                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 20                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 10                          ;
 ;         3 data inputs ; 12                          ;
-;         4 data inputs ; 43                          ;
+;         4 data inputs ; 104                         ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 1.65                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.11                        ;
 +-----------------------+-----------------------------+
 
 
@@ -500,7 +585,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -510,17 +595,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed May 08 19:15:10 2019
+    Info: Processing started: Wed Jun 19 17:15:19 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off POV_GLOBE -c POV_GLOBE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (10229): Verilog HDL Expression warning at Main.v(364): truncated literal to match 9 bits File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 364
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
     Info (12023): Found entity 1: Main File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file pov_globe.v
     Info (12023): Found entity 1: POV_GLOBE File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file memory.v
-    Info (12023): Found entity 1: Memory File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Memory.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at Main.v(101): created implicit net for "reset" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 101
+Info (12021): Found 1 design units, including 1 entities, in source file rom1.v
+    Info (12023): Found entity 1: ROM1 File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/ROM1.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at Main.v(127): created implicit net for "reset" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 127
 Info (12127): Elaborating entity "POV_GLOBE" for the top level hierarchy
 Warning (10034): Output port "LED" at POV_GLOBE.v(12) has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 12
 Warning (10034): Output port "DRAM_ADDR" at POV_GLOBE.v(21) has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 21
@@ -540,39 +626,64 @@ Warning (10034): Output port "I2C_SCLK" at POV_GLOBE.v(41) has no driver File: C
 Warning (10034): Output port "ADC_CS_N" at POV_GLOBE.v(45) has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 45
 Warning (10034): Output port "ADC_SADDR" at POV_GLOBE.v(46) has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 46
 Warning (10034): Output port "ADC_SCLK" at POV_GLOBE.v(47) has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 47
-Info (12128): Elaborating entity "Main" for hierarchy "Main:main" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 70
-Warning (10036): Verilog HDL or VHDL warning at Main.v(28): object "data_request" assigned a value but never read File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at Main.v(29): object "new_address" assigned a value but never read File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 29
-Warning (10230): Verilog HDL assignment warning at Main.v(147): truncated value with size 32 to match size of target (13) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 147
-Warning (10230): Verilog HDL assignment warning at Main.v(163): truncated value with size 32 to match size of target (3) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 163
-Warning (10230): Verilog HDL assignment warning at Main.v(165): truncated value with size 32 to match size of target (3) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 165
-Warning (10230): Verilog HDL assignment warning at Main.v(193): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 193
-Info (10264): Verilog HDL Case Statement information at Main.v(202): all case item expressions in this case statement are onehot File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 202
-Info (12128): Elaborating entity "Memory" for hierarchy "Main:main|Memory:memory" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 98
-Info (12128): Elaborating entity "altsyncram" for hierarchy "Main:main|Memory:memory|altsyncram:altsyncram_component" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Memory.v Line: 86
-Info (12130): Elaborated megafunction instantiation "Main:main|Memory:memory|altsyncram:altsyncram_component" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Memory.v Line: 86
-Info (12133): Instantiated megafunction "Main:main|Memory:memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Memory.v Line: 86
+Info (12128): Elaborating entity "Main" for hierarchy "Main:main" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 72
+Warning (10036): Verilog HDL or VHDL warning at Main.v(29): object "data_request" assigned a value but never read File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 29
+Warning (10036): Verilog HDL or VHDL warning at Main.v(30): object "new_address" assigned a value but never read File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 30
+Warning (10036): Verilog HDL or VHDL warning at Main.v(124): object "HALL_TIMER" assigned a value but never read File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 124
+Warning (10230): Verilog HDL assignment warning at Main.v(174): truncated value with size 32 to match size of target (22) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 174
+Warning (10230): Verilog HDL assignment warning at Main.v(222): truncated value with size 32 to match size of target (15) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 222
+Warning (10230): Verilog HDL assignment warning at Main.v(236): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 236
+Warning (10230): Verilog HDL assignment warning at Main.v(238): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 238
+Warning (10230): Verilog HDL assignment warning at Main.v(254): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 254
+Warning (10230): Verilog HDL assignment warning at Main.v(273): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 273
+Warning (10230): Verilog HDL assignment warning at Main.v(278): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 278
+Warning (10230): Verilog HDL assignment warning at Main.v(284): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 284
+Warning (10230): Verilog HDL assignment warning at Main.v(288): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 288
+Warning (10230): Verilog HDL assignment warning at Main.v(293): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 293
+Warning (10230): Verilog HDL assignment warning at Main.v(310): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 310
+Warning (10230): Verilog HDL assignment warning at Main.v(318): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 318
+Warning (10230): Verilog HDL assignment warning at Main.v(330): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 330
+Warning (10230): Verilog HDL assignment warning at Main.v(332): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 332
+Warning (10230): Verilog HDL assignment warning at Main.v(340): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 340
+Warning (10230): Verilog HDL assignment warning at Main.v(349): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 349
+Warning (10230): Verilog HDL assignment warning at Main.v(356): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 356
+Warning (10230): Verilog HDL assignment warning at Main.v(358): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 358
+Warning (10230): Verilog HDL assignment warning at Main.v(384): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 384
+Warning (10230): Verilog HDL assignment warning at Main.v(386): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 386
+Warning (10230): Verilog HDL assignment warning at Main.v(417): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 417
+Warning (10230): Verilog HDL assignment warning at Main.v(422): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 422
+Warning (10230): Verilog HDL assignment warning at Main.v(426): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 426
+Warning (10230): Verilog HDL assignment warning at Main.v(430): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 430
+Warning (10230): Verilog HDL assignment warning at Main.v(439): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 439
+Warning (10230): Verilog HDL assignment warning at Main.v(451): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 451
+Warning (10230): Verilog HDL assignment warning at Main.v(453): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 453
+Warning (10230): Verilog HDL assignment warning at Main.v(465): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 465
+Warning (10230): Verilog HDL assignment warning at Main.v(483): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 483
+Warning (10230): Verilog HDL assignment warning at Main.v(485): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 485
+Warning (10230): Verilog HDL assignment warning at Main.v(514): truncated value with size 32 to match size of target (6) File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 514
+Info (10264): Verilog HDL Case Statement information at Main.v(522): all case item expressions in this case statement are onehot File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 522
+Info (12128): Elaborating entity "ROM1" for hierarchy "Main:main|ROM1:rom" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/Main.v Line: 138
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Main:main|ROM1:rom|altsyncram:altsyncram_component" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/ROM1.v Line: 82
+Info (12130): Elaborated megafunction instantiation "Main:main|ROM1:rom|altsyncram:altsyncram_component" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/ROM1.v Line: 82
+Info (12133): Instantiated megafunction "Main:main|ROM1:rom|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/ROM1.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "Color_Data.mif"
+    Info (12134): Parameter "init_file" = "ROM_Data2.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "36"
-    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "numwords_a" = "999"
+    Info (12134): Parameter "operation_mode" = "ROM"
     Info (12134): Parameter "outdata_aclr_a" = "NONE"
     Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
-    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
-    Info (12134): Parameter "widthad_a" = "6"
+    Info (12134): Parameter "widthad_a" = "10"
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_lji1.tdf
-    Info (12023): Found entity 1: altsyncram_lji1 File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/db/altsyncram_lji1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_lji1" for hierarchy "Main:main|Memory:memory|altsyncram:altsyncram_component|altsyncram_lji1:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_j9a1.tdf
+    Info (12023): Found entity 1: altsyncram_j9a1 File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/db/altsyncram_j9a1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_j9a1" for hierarchy "Main:main|ROM1:rom|altsyncram:altsyncram_component|altsyncram_j9a1:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO[0]" and its non-tri-state driver. File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 27
     Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 27
@@ -604,42 +715,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO_2[10]" has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 51
     Warning (13040): bidirectional pin "GPIO_2[11]" has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 51
     Warning (13040): bidirectional pin "GPIO_2[12]" has no driver File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 51
-Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "GPIO[1]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[2]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[3]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[4]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[5]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[6]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[7]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[8]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[9]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[10]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[11]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[12]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[13]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[14]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[15]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[16]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[17]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[18]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[19]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[20]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[21]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[22]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[23]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[24]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[25]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[26]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[27]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[28]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[29]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[30]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[31]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[32]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-    Warning (13033): The pin "GPIO[33]" is fed by GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "GPIO[0]~synth" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 55
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[0]" is stuck at GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 12
     Warning (13410): Pin "LED[1]" is stuck at GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 12
@@ -681,11 +756,11 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADC_SADDR" is stuck at GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 46
     Warning (13410): Pin "ADC_SCLK" is stuck at GND File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 47
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 3 MSB VCC or GND address nodes from RAM block "Main:main|Memory:memory|altsyncram:altsyncram_component|altsyncram_lji1:auto_generated|ALTSYNCRAM" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/db/altsyncram_lji1.tdf Line: 33
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 4 MSB VCC or GND address nodes from RAM block "Main:main|ROM1:rom|altsyncram:altsyncram_component|altsyncram_j9a1:auto_generated|ALTSYNCRAM" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/db/altsyncram_j9a1.tdf Line: 32
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 15
     Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 18
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 18
@@ -697,18 +772,16 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO_2_IN[0]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 52
     Warning (15610): No output dependent on input pin "GPIO_2_IN[1]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 52
     Warning (15610): No output dependent on input pin "GPIO_2_IN[2]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 52
-    Warning (15610): No output dependent on input pin "GPIO_IN[0]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 57
-    Warning (15610): No output dependent on input pin "GPIO_IN[1]" File: C:/Users/Jordi Jaspers/Google Drive/UHasselt/3de Aca. Bachelor IIW/System On Chip Design/ALTERA_SOCO_PROJECT/POV_GLOBE.v Line: 57
-Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 39 output pins
-    Info (21060): Implemented 64 bidirectional pins
-    Info (21061): Implemented 119 logic cells
+Info (21057): Implemented 294 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 40 output pins
+    Info (21060): Implemented 30 bidirectional pins
+    Info (21061): Implemented 186 logic cells
     Info (21064): Implemented 24 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 150 warnings
-    Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Wed May 08 19:18:18 2019
-    Info: Elapsed time: 00:03:08
-    Info: Total CPU time (on all processors): 00:01:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 139 warnings
+    Info: Peak virtual memory: 4787 megabytes
+    Info: Processing ended: Wed Jun 19 17:15:36 2019
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:35
 
 
